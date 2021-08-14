@@ -1,0 +1,91 @@
+body{
+  background-color: #400a30;
+}
+#background{
+  background-color: #400a30;
+  height: 420px;
+  width: 539px;
+  //border: 1px solid blue;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.front{
+  height:50px;
+  width:50px;
+  background-color:#400a30;
+  margin:10px;
+  border-radius : 50%
+}
+
+.player-one{
+  background-color:#fc0349;
+  z-index: 100;
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-timing-function:ease-out;
+  animation-fill-mode: forwards;
+  //bottom:10px;
+  position:relative
+}
+
+.player-two{
+  background-color:orange;
+  z-index: 100;
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-timing-function:ease-out;
+  animation-fill-mode: forwards;
+  //bottom:10px;
+  position:relative
+}
+
+ @keyframes example {
+  0%   { bottom:450px;}
+  40%  { bottom:0}
+  50%  { bottom:40px}
+  60%  {bottom:0}
+  70%  {bottom: 20px}
+  80% { bottom:0}
+  100%{ bottom:0}
+}
+
+.container{
+  position:relative;
+  top:-421px;
+  right:-3px;
+  margin:auto;
+  width:539px;
+  height:420px;
+  display:flex;
+  flex-wrap:wrap;
+  z-index:2000;
+}
+
+.backgrounds{
+  position:relative;
+  width:77px;
+  height:70px;
+  //margin:0 auto;
+  overflow:hidden;
+}
+.fronts{
+  overflow:none;
+  z-index:2;
+  position:relative;
+  top:0;
+  border-radius:100%;
+  width:50px; height:50px; margin:10px;
+  box-shadow: 0px 0px 0px 2000px #570d41;
+}
+
+.current{
+  border: 3.2px solid white;
+}
+
+.win{
+  border: 3.2px solid blue;
+}
